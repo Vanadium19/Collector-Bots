@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -51,7 +50,7 @@ public class Base : MonoBehaviour
     private void SendBot(Bot bot)
     {
         bot.SetResource(_currentResource.transform);
-        bot.ExecuteMission();
+        bot.CollectResource();
         _currentResource = null;
     } 
 }
