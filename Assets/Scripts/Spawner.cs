@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
 
     private void SpawnResource()
     {
-        var resource = Instantiate(_resourceTemplate, _spawnPoints[Random.Range(0, _spawnPoints.Length)], Quaternion.identity);        
+        var resource = Instantiate(_resourceTemplate, _spawnPoints[Random.Range(0, _spawnPoints.Length)], Quaternion.identity);
         _ground.AddResource(resource);
     }
 
