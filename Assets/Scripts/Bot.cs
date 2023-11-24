@@ -1,14 +1,29 @@
 using UnityEngine;
 
-public abstract class Bot : MonoBehaviour
+[RequireComponent(typeof(ResourceCollector))]
+public class Bot : MonoBehaviour
 {
-    [SerializeField] protected Base Base;    
-   
-    protected Transform TargetResource;    
+    [SerializeField] private Base _base;
 
-    public bool IsBusy => TargetResource != null;
+    private ResourceCollector _resourceCollector;
+    private bool _isBusy = false;
 
-    public void SetResource(Transform resource) => TargetResource = resource;
+    public bool IsBusy => _isBusy;
 
-    public abstract void CollectResource();    
+    private void Awake()
+    {
+        _resourceCollector = GetComponent<ResourceCollector>();        
+    }   
+
+    public void CollectResource(Vector3 _resourceContainer, Transform resource)
+    {
+        _resourceCollector.StartCollecting(_resourceContainer, resource);
+        _isBusy = true;
+    }
+
+    public void HandOverResource(Transform resource)
+    {
+        _base.AddResource(resource.GetComponent<Resource>());
+        _isBusy = false;
+    }
 }

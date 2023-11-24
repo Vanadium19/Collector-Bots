@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Rendering;
-using UnityEngine.UIElements;
 
 public class Base : MonoBehaviour
 {
@@ -70,9 +68,8 @@ public class Base : MonoBehaviour
     }
 
     private void SendBot(Bot bot)
-    {
-        bot.SetResource(_currentResource.transform);
-        bot.CollectResource();
+    {        
+        bot.CollectResource(_resourceContainer.position, _currentResource.transform);
         _currentResource = null;
     }
 

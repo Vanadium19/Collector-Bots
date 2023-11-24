@@ -8,7 +8,7 @@ public class BotMover : MonoBehaviour
 
     private int _distance = 1;
 
-    public IEnumerator MoveTo(Vector3 targetPosition, UnityAction botAction)
+    public IEnumerator MoveTo(Vector3 targetPosition, Transform resource, UnityAction<Transform> botAction)
     {
         transform.LookAt(targetPosition);
 
@@ -20,6 +20,6 @@ public class BotMover : MonoBehaviour
             yield return null;
         }
 
-        botAction?.Invoke();
+        botAction?.Invoke(resource);
     }
 }
