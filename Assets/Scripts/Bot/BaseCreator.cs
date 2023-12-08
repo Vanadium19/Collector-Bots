@@ -5,6 +5,7 @@ public class BaseCreator : MonoBehaviour
 {
     [SerializeField] private Base _basePrefab;
 
+    private readonly bool _isDefaultIncluded = false;
     private BotMover _botMover;
     private Bot _bot;
 
@@ -24,6 +25,6 @@ public class BaseCreator : MonoBehaviour
         Base newBase = Instantiate(_basePrefab, flag.position, Quaternion.identity);
         newBase.transform.LookAt(Vector3.zero);
         newBase.AddBot(_bot);
-        flag.GetComponent<Flag>().SwitchOff();
+        flag.GetComponent<Flag>().Switch(_isDefaultIncluded);
     }
 }

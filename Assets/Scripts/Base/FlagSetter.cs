@@ -28,7 +28,7 @@ public class FlagSetter : MonoBehaviour
                 _flag.transform.position = hitInfo.point;
 
                 if (_flag.activeSelf == false)                                    
-                    _flag.GetComponent<Flag>().SwitchOn();                
+                    _flag.GetComponent<Flag>().Switch(true);                
             }
         }
 

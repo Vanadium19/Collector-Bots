@@ -24,6 +24,7 @@ public class ResourceCollector : MonoBehaviour
         yield return StartCoroutine(_botMover.MoveTo(resource.position, resource, PickUpResource));
         StartCoroutine(_botMover.MoveTo(startPosition, resource, PutResource));
     }
+
     private void PickUpResource(Transform resource)
     {
         resource.position = default;

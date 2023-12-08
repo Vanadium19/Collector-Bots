@@ -7,23 +7,17 @@ public class Flag : MonoBehaviour
 
     private void Awake()
     {
-        SwitchOff();
+        Switch(false);
     }
 
     private void OnEnable()
     {
         Installed?.Invoke();
-    }
+    }   
 
-    public void SwitchOff()
+    public void Switch(bool isIncluded)
     {
-        gameObject.SetActive(false);
-        enabled = false;
-    }
-
-    public void SwitchOn()
-    {
-        gameObject.SetActive(true);
-        enabled = true;
+        gameObject.SetActive(isIncluded);
+        enabled = isIncluded;
     }
 }
