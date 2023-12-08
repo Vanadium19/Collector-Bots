@@ -57,15 +57,22 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Base.cs" />
-    <Compile Include="Assets\Scripts\Spawner.cs" />
-    <Compile Include="Assets\Scripts\Ground.cs" />
-    <Compile Include="Assets\Scripts\BotMover.cs" />
+    <Compile Include="Assets\Scripts\Bot\BotMover.cs" />
+    <Compile Include="Assets\Scripts\Base\Flag.cs" />
+    <Compile Include="Assets\Scripts\Base\FlagSetter.cs" />
+    <Compile Include="Assets\Scripts\Base\ObjectCreator.cs" />
+    <Compile Include="Assets\Scripts\NamesData.cs" />
+    <Compile Include="Assets\Scripts\Base\ClickReceiver.cs" />
+    <Compile Include="Assets\Scripts\Ground\Spawner.cs" />
+    <Compile Include="Assets\Scripts\Base\ResourceStorage.cs" />
+    <Compile Include="Assets\Scripts\UI\ResourceСounter.cs" />
+    <Compile Include="Assets\Scripts\Ground\Ground.cs" />
+    <Compile Include="Assets\Scripts\Bot\ResourceCollector.cs" />
+    <Compile Include="Assets\Scripts\Base\Base.cs" />
+    <Compile Include="Assets\Scripts\Bot\Bot.cs" />
     <Compile Include="Assets\Scripts\Resource.cs" />
-    <Compile Include="Assets\Scripts\Bot.cs" />
-    <Compile Include="Assets\Scripts\NameData.cs" />
-    <Compile Include="Assets\Scripts\ResourceСounter.cs" />
-    <Compile Include="Assets\Scripts\ResourceCollector.cs" />
+    <Compile Include="Assets\Scripts\Bot\BaseCreator.cs" />
+    <Compile Include="Assets\Scripts\Base\Scaner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
